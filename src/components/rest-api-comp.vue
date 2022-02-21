@@ -16,6 +16,7 @@
 import axios from 'axios'
 
 
+
 export default {
   data(){
     return {
@@ -45,7 +46,9 @@ export default {
           }
       }
 
-      this.news = await axios.get('https://api.collectapi.com/news/getNews?country='+ulkeKodu+'&tag=general',optionAxios)
+      var apiTag= window.location.pathname.split("/")[1]
+
+      this.news = await axios.get('https://api.collectapi.com/news/getNews?country='+ulkeKodu+'&tag='+ apiTag,optionAxios)
       .then( function(response)  {
       console.log(response.data.result[0].name);
       console.log(response.data.result[0].description);
