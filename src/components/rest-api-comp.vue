@@ -25,10 +25,16 @@ export default {
   },
   //-> async created() <- ve -> await axios get(dinamikIpString) <-
   async created(){
-    
-    //local'de denediğim için statik değer verildi
-    var ulkeSonKullanici = "window.location.host";
-    //[window.location.host-->kullanici_ip<-]
+    var ulkeSonKullanici;
+    fetch('https://api.ipify.org?format=json')
+    .then(x => x.json())
+    .then(({ ip }) => {
+        ulkeSonKullanici = ip; //client IP
+    });
+
+
+
+
 
     var dynamicIpString = "http://api.ipapi.com/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
         var ulkeKodu = await axios.get(dynamicIpString)
