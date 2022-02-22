@@ -43,7 +43,7 @@ export default {
         .catch(function(error){
           console.log("->ip bulma apisi patladi->"+error)
         })
-        //console.log(ulkeKodu)
+        console.log(dynamicIpString)
 
       //header değerleri -> api-key
       var optionAxios = {
