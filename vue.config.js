@@ -4,6 +4,13 @@ module.exports = defineConfig({
 })
 
 module.exports = {
+
+  configureWebpack: {
+    devServer: {
+      historyApiFallback: true
+    }
+  }
+
   devServer: {
     proxy: 'http://localhost:8080'
   }
