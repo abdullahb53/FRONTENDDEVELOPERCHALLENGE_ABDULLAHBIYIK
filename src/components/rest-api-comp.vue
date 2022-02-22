@@ -44,6 +44,7 @@ export default {
           console.log("->ip bulma apisi patladi->"+error)
         })
         console.log(dynamicIpString)
+        console.log(ulkeKodu)
 
       //header değerleri -> api-key
       var optionAxios = {
