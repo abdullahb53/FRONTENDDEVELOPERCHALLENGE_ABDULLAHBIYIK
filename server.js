@@ -12,7 +12,7 @@ app.listen(port);
 console.log("Sunucu basladi..")
 
 
-
+//alttaki kod çalışmadı..
 /*
 const serveStatic = require('serve-static')
 const path = require('path')

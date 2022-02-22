@@ -60,7 +60,7 @@ export default {
       }
       //apitag'i; &tag= ( "->bu kısım değiştikçe içerik değişiyor<-" )
       var apiTag= window.location.pathname.split("/")[1] //pathname ile gelen url fazladan "/" içeriyor split ile 2. dizi elemanını aldık [0]->"/" [1]->"economy"
-
+      ulkeKodu = "tr"; // silinecekkısım
       this.news = await axios.get('https://api.collectapi.com/news/getNews?country='+ulkeKodu+'&tag='+ apiTag,optionAxios)
       .then( function(response)  { // !!! lambda fonksiyonu olduğunda çalışmadı !!! XXX "function" -> ""=>"" XXX
       //console.log(response.data.result[0].name);
