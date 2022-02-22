@@ -27,8 +27,13 @@ export default {
   async created(){
     
     //local'de denediğim için statik değer verildi
-    var ulkeSonKullanici = "window.location.host";
-    //[window.location.host-->kullanici_ip<-]
+    var ulkeSonKullanici;
+    await fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(response => {
+    ulkeSonKullanici = response.ip; //client ip
+    });
+    console.log(ulkeSonKullanici)
 
     var dynamicIpString = "http://api.ipapi.com/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
         var ulkeKodu = await axios.get(dynamicIpString)
