@@ -35,16 +35,20 @@ export default {
     });
     console.log(ulkeSonKullanici)
 
+
+    var ulkeKodu
     var dynamicIpString = "http://api.ipapi.com/api/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
-        var ulkeKodu = await axios.get(dynamicIpString)
-        .then(function(response){
-          return response.data.country_code.toLowerCase().trim() //country_code büyük harflerle "TR,EN,DE" geliyor fakat biz collect-api de küçük harfle get yapıyoruz!
+        await axios.get(dynamicIpString)
+        .then(response => response.json())
+        .then(response => {
+          ulkeKodu = response.data.country_code.toLowerCase().trim() //country_code büyük harflerle "TR,EN,DE" geliyor fakat biz collect-api de küçük harfle get yapıyoruz!
         })
         .catch(function(error){
           console.log("->ip bulma apisi patladi->"+error)
-        })
+        });
         console.log(dynamicIpString)
         console.log(ulkeKodu)
+        console.log(this.ulkeKodu)
 
       //header değerleri -> api-key
       var optionAxios = {
