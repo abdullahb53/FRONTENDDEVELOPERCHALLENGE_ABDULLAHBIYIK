@@ -27,7 +27,7 @@ export default {
   async created(){
     
     //local'de denediğim için statik değer verildi
-    var ulkeSonKullanici = "188.210.13.246";
+    var ulkeSonKullanici = "window.location.host";
     //[window.location.host-->kullanici_ip<-]
 
     var dynamicIpString = "http://api.ipapi.com/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
