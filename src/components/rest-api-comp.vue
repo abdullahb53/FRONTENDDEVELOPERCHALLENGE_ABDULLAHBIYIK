@@ -1,6 +1,6 @@
 <template>
 
-<div v-for="index in news.length" :key="index" class="kart" v-bind:id="index"  >
+<div v-for="index in kartSayisi" :key="index" class="kart" v-bind:id="index"  >
     <div class="kart_photo"><img class="img-fluid" v-bind:src= "news[index-1].image"></div>
     <div class="kart_baslik"><h1> {{news[index-1].name }} </h1></div>
     <div class="kart_aciklama"><h2>{{ news[index-1].description }}</h2></div>
@@ -21,10 +21,13 @@ export default {
   data(){
     return {
       news: null,
+      kartSayisi: null
     }
   },
   //-> async created() <- ve -> await axios get(dinamikIpString) <-
   async created(){
+
+    
     
     //local'de denediğim için statik değer verildi
     var ulkeSonKullanici;
@@ -47,7 +50,6 @@ export default {
         })
         console.log(dynamicIpString)
         console.log(ulkeKodu)
-        console.log(this.ulkeKodu)
 
       //header değerleri -> api-key
       var optionAxios = {
@@ -64,6 +66,7 @@ export default {
       //console.log(response.data.result[0].name);
       //console.log(response.data.result[0].description);
       //console.log(response.data.result[0].date);
+      
       return response.data.result // this.news içine değeri bastık üst 3 satır ->"console.log()'lardaki desen devam ediyor.
     
        })
@@ -71,6 +74,9 @@ export default {
            console.log("->collect-api patladi->"+error);
            
         });
+
+        //this.kartSayisi = this.news.length
+       this.kartSayisi = this.news.length
 
         console.log(this.news.length)
     
