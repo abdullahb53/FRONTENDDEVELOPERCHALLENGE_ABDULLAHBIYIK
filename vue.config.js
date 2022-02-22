@@ -7,11 +7,10 @@ module.exports = {
 
   configureWebpack: {
     devServer: {
+      proxy: 'http://localhost:8080',
       historyApiFallback: true
     }
   }
+  
 
-  devServer: {
-    proxy: 'http://localhost:8080'
-  }
 }
