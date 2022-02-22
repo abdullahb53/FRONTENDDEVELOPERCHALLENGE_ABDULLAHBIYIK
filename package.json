@@ -44,5 +44,14 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }
