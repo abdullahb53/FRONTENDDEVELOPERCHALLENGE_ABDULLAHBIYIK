@@ -9,7 +9,7 @@ const app = express()
 
 
 
-app.use('/',serveStatic(path.join(__dirname,'/dist')))
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 
 const port = process.env.PORT || 8080
