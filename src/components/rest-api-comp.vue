@@ -39,13 +39,12 @@ export default {
     var ulkeKodu
     var dynamicIpString = "http://api.ipapi.com/api/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
         await axios.get(dynamicIpString)
-        .then(response => response.json())
-        .then(response => {
-          ulkeKodu = response.data.country_code.toLowerCase().trim() //country_code büyük harflerle "TR,EN,DE" geliyor fakat biz collect-api de küçük harfle get yapıyoruz!
+        .then(function(response){
+         this.ulkeKodu = response.data.country_code.toLowerCase().trim() //country_code büyük harflerle "TR,EN,DE" geliyor fakat biz collect-api de küçük harfle get yapıyoruz!
         })
         .catch(function(error){
           console.log("->ip bulma apisi patladi->"+error)
-        });
+        })
         console.log(dynamicIpString)
         console.log(ulkeKodu)
         console.log(this.ulkeKodu)
