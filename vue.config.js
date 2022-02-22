@@ -10,12 +10,3 @@ module.exports = {
   }
 }
 
-module.exports = {
-
-  configureWebpack: {
-    devServer: {
-      historyApiFallback: true
-    }
-  }
-
-};
