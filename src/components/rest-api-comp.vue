@@ -23,52 +23,55 @@ export default {
       news: null,
     }
   },
-  //async created() ve await axios get(dinamikIpString) 
+  //-> async created() <- ve -> await axios get(dinamikIpString) <-
   async created(){
-  
+    
+    //local'de denediğim için statik değer verildi
     var ulkeSonKullanici = "188.210.13.246";
-    // window.location.host
+    //[window.location.host-->kullanici_ip<-]
 
     var dynamicIpString = "http://api.ipapi.com/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
         var ulkeKodu = await axios.get(dynamicIpString)
         .then(function(response){
-          return response.data.country_code.toLowerCase().trim()
+          return response.data.country_code.toLowerCase().trim() //country_code büyük harflerle "TR,EN,DE" geliyor fakat biz collect-api de küçük harfle get yapıyoruz!
         })
         .catch(function(error){
-          console.log("errorvar"+error)
+          console.log("->ip bulma apisi patladi->"+error)
         })
-      console.log(ulkeKodu)
+        //console.log(ulkeKodu)
 
+      //header değerleri -> api-key
       var optionAxios = {
           headers: {
             "content-type":"application/json",
             "authorization":"apikey 0v7dhJ1WwYlaR90Y6ErZdD:3T14eFz8OdWeS9N2z8SIV9"
           }
       }
-
-      var apiTag= window.location.pathname.split("/")[1]
+      //apitag'i; &tag= ( "->bu kısım değiştikçe içerik değişiyor<-" )
+      var apiTag= window.location.pathname.split("/")[1] //pathname ile gelen url fazladan "/" içeriyor split ile 2. dizi elemanını aldık [0]->"/" [1]->"economy"
 
       this.news = await axios.get('https://api.collectapi.com/news/getNews?country='+ulkeKodu+'&tag='+ apiTag,optionAxios)
-      .then( function(response)  {
-      console.log(response.data.result[0].name);
-      console.log(response.data.result[0].description);
-      console.log(response.data.result[0].date);
-      //lambda fonksiyon olunca name kısmı gelmiyor
-      return response.data.result
+      .then( function(response)  { // !!! lambda fonksiyonu olduğunda çalışmadı !!! XXX "function" -> ""=>"" XXX
+      //console.log(response.data.result[0].name);
+      //console.log(response.data.result[0].description);
+      //console.log(response.data.result[0].date);
+      return response.data.result // this.news içine değeri bastık üst 3 satır ->"console.log()'lardaki desen devam ediyor.
     
        })
        .catch( function(error) {
-           console.log("errorvar"+error);
+           console.log("->collect-api patladi->"+error);
            
         });
 
         console.log(this.news.length)
     
-  //"CORS" kapatmak için...
+  //___"CORS" kapatmak için___
   /*
+  ->vue.config.js->..........<<
+
   module.exports = {
     devServer: {
-      proxy: 'http://localhost:8080'  --> 'api sunan sitenin ismini proxy yapilir' -> root/[vue.config.js]
+      proxy: 'http://localhost:8080'  --> 'api sunan sitenin ismi proxy yapilir' -> root/[vue.config.js]
     }
   }
   */
