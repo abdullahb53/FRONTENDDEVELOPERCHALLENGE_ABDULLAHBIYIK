@@ -1,0 +1,682 @@
+* {
+padding: 0;
+margin: 0;
+
+
+}
+
+html{
+  font-size: 10px;
+
+}
+.carousel-item{
+  height:1px;
+  background-color: green;
+}
+
+
+@media (max-width: 1045px) { 
+
+  #nav-links{
+    display: none;
+    visibility: hidden;
+  }
+
+ header #trendPhoto{
+    float:none;
+    width: 100%;
+  
+  }
+
+  header #trendContentMain{
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  #ortaSol_icerik .kart{
+    width: 100%;
+    float:none;
+    padding-top: 0px;
+    padding-left: 3px;
+    padding-right:3px;
+  
+
+    
+  }
+
+   #ortaSol_icerik .kart .kart_photo{
+    padding-top: 1%;
+  }
+  #ortaSol_icerik .kart .kart_aciklama{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #ortaSol_icerik .kart .kart_baslik{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #ortaSol_icerik .kart .kart_zaman{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #ortaSol_icerik .kart .kart_like{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  section #ortaKisim {
+    width: 100%;
+  
+  }
+
+  section #ortaKisim #ortaSol {
+    width: 100%;
+    padding-left:0px;
+    padding-right:0px;
+
+  }
+
+  section #ortaKisim #ortaSag {
+    width: 100%;
+    margin-top: 4%;
+    float: none;
+
+  }
+
+  section{
+    width: 100%;
+  }
+
+  section .container{
+    width: 100%
+  }
+
+
+
+  #ortaSol{
+    width: 100%;
+    float:none;
+ 
+  }
+
+  #ortaKisim #ortaSol_icerik
+  {
+    width: 100%;
+    float:none;
+  }
+
+
+
+
+  #ortaSol #ortaSol_linkler{
+    width: 100%;
+  }
+
+
+  #ortaKisim #ortaSag{
+    width: 100%;
+
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+ }
+
+@font-face {
+    font-family: 'Poppins';
+    src: URL('../font/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: URL('../font/Montserrat/Montserrat-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Nunito_Sans';
+  src: URL('../font/Nunito_Sans/NunitoSans-Regular.ttf') format('truetype');
+}
+
+h1{
+  font-family: IBM Plex Serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+
+h2{
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+  
+}
+h3{
+
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+
+}
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.img-fluid{
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: block; /* remove extra space below image */
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body{
+font-family:sans-serif;
+font-size:1.2rem;
+background-color: #E5E5E5;
+}
+
+/** NAVBAR **/
+nav{
+  opacity: 85%;
+  backdrop-filter: blur(28px);
+  background-color: #FFFFFF  ;
+  color:#2A2A2A;
+  padding-top: 4px;
+  padding-bottom: 14px;
+  position: fixed ;
+  width: 100%;
+  padding-left :16%;
+  padding-right :16%;
+
+}
+
+#logo-box{
+  float:left;
+  margin-top:9px;
+
+  
+}
+/* NAV FIRST links */
+#nav-links{
+  float:center;
+  padding-top: 10px;
+}
+
+#nav-links .nav-item{
+  float: left;
+  margin-left: 3rem;
+
+}
+
+#nav-links .nav-link{
+  color:#2A2A2A;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21,82px;
+  display: block;
+  padding-top: 14px;
+}
+/* NAV SECOND links */
+#nav-second-links{
+  float:right;
+}
+
+#nav-second-links .nav-item{
+  float: left;
+  margin-left: 4px;
+}
+
+#nav-second-links .nav-link{
+  color:#2A2A2A;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21,82px;
+  display: block;
+}
+/** NAVBAR*SON **/
+
+/** HEADER **/
+
+header{
+  background-color:#E5E5E5;
+  width: 100%;
+ 
+  padding-top:calc(80px + 3.2rem);
+  padding-bottom: 3.2rem;
+  padding-right: 16%;
+  padding-left: 16%;
+
+}
+
+#trendPhoto {
+  float:left;
+  width: 50%;
+
+}
+
+
+#tcu_1 {
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 1.4rem;
+line-height: 29px;
+letter-spacing: 0.02em;
+color:#C31815;
+float:left;
+text-align: left;
+}
+#tcu_2 {
+  float:right;
+  text-align: right;
+}
+
+#trendContentMain{
+  padding-top: 80px;
+  padding-left: 76px;
+  width: 50%;
+  float:right;
+}
+
+#trendContentMiddle {
+  padding-top: 33px;
+  text-align: left;
+}
+
+.leftFloat{
+float:left;
+}
+.rightFloat{
+float:right;
+}
+
+#tcm_aciklama{
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+#trendContentMiddle{
+margin-bottom: 30px;
+  
+}
+
+#tcb_zaman{
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+#tcb_kisi{
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+margin-left: 20px;
+}
+
+/** HEADER*SON **/
+/** REKLAM **/
+section{
+  width: 100%;
+  padding-left:16%;
+  padding-right:16%; 
+
+}
+#reklam{
+background-color: #C31815;
+height: 80px;
+border-radius: 0px;
+
+}
+
+#reklamYazisi{
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 15px;
+letter-spacing: 0px;
+text-align: center;
+color: #E5E5E5;
+margin-top: 31px;
+height: 25px;
+
+border-radius: nullpx;
+}
+
+
+#reklamButonu{
+
+  
+background-color: #E5E5E5;
+  color: #C31815;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0px;
+  text-align: center;
+height: 31px;
+margin-left: 22%;
+margin-top: 25px;
+margin-right: 90px;
+padding-right: 5px;
+padding-left: 5px;
+padding-top:8px;
+border-radius: 2px;
+}
+
+#placeHolder{
+  height: 54px;
+
+border-radius: 2px;
+
+  
+
+}
+
+
+
+#ortaKisim{
+  margin-top: 30px;
+}
+
+#ortaSol_linkler{
+  color:#2A2A2A;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21,82px;
+  display: block;
+  padding-top: 5px;
+
+  
+  height: 54px;
+  border-radius: 0px;
+  background-color: #FFFFFF;
+}
+
+#ortaSol{
+width:70%;
+
+}
+
+#ortaSol_icerik{
+  margin-top: 20px;
+}
+
+#ortaSag{
+  width: 30%;
+  padding: 30px;
+}
+
+
+
+#ortaSol_linkler{
+  padding-top: 13px;
+  padding-left: 28px;
+}
+
+.midLinkler{
+  margin-left: 27px;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: left;
+color: #2A2A2A;
+
+}
+
+.kart{
+  float: left;
+  margin-top: 5px;
+  margin-right: 5px;
+  
+  padding: 9px;
+  height: 600px;
+  width: 49%;
+  border-radius: 3px;
+  border-color:black ;
+  box-shadow: 0px 2px 14px 0px #2A2A2A3D;
+  background: #FFFFFF;
+}
+
+.kart_zaman{
+  margin-top: 20px;
+}
+.kart_like{
+margin-top: 10px;
+text-align: center;
+
+}
+
+.kart_baslik{
+  overflow-y:visible;
+}
+
+.kart_aciklama{
+
+  overflow-y: visible;
+}
+
+#live_live{
+  color: #C31815;
+
+}
+
+#live_font{
+  color: #C31815;
+  margin-left: 15px;
+  margin-top: 5px;
+
+}
+
+#ortaSag_getLocationNews{
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+#photoMetin{
+  font-family: IBM Plex Serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+
+}
+
+#ortaSag_live{
+margin-bottom: 30px;
+
+}
+
+/** REKLAM SON**/
+
+#locationNewsDiv{
+  margin-top: 2%;
+  height: 216px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+  
+  
+  
+
+}
+
+#locationNewsDiv #enterLocationText{
+  opacity: 50%;
+  border: 1px solid #141414;
+  border-radius: 2px;
+  width: 95%;
+  margin-top: 6%;
+  padding: 10px;
+  background-color: #FFFFFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+
+#locationNewsButton{
+  border-width: 0px;
+  margin-top: 3%;
+  color: #FFFFFF;
+  background: #C31815;
+  height: 40px;
+  width: 100px;
+  font-family: Poppins;
+  border-radius: 2px;
+  
+}
+
+#ortaSolViewMore{
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+
+  float: left;
+}
+
+
+#ortaSolViewMoreButton{
+
+
+height: 60px;
+width: 220px;
+border-radius: 2px;
+color: #C31815;
+opacity: 0.28;
+border: 1px solid #C31815;
+border-radius: 2px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 15px;
+
+align-items: center;
+text-align: center;
+letter-spacing: 1.6px;
+text-transform: uppercase;
+
+}
+
+#EditorPick{
+  width: 50%;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 3%;
+margin-top: 3%;
+
+}
+
+ #enAlt{
+
+  width: 100%;
+
+  height: 250px;
+  background-color: #0E1E32;
+}
+
+#EditorPick #pMetin{
+font-family: Nunito_Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+#EditorPickImg{
+  margin-right: 5px;
+}
+
+#enAlt #siyahBeyazSiteLogusu{
+position: relative;
+left: 45%;
+
+top: 40%;
+width: 200px;
+margin-top: 5px;
+color: #FFFFFF;
+
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0.02em;
+text-align: center;
+}
+
+
+
