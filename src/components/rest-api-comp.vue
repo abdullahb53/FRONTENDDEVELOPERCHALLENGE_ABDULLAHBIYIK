@@ -26,9 +26,7 @@ export default {
   },
   //-> async created() <- ve -> await axios get(dinamikIpString) <-
   async created(){
-
-    
-    
+    /*
     //local'de denediğim için statik değer verildi
     var ulkeSonKullanici;
     await fetch('https://api.ipify.org?format=json')
@@ -37,8 +35,7 @@ export default {
     ulkeSonKullanici = response.ip; //client ip
     });
     console.log(ulkeSonKullanici)
-
-
+    
     var ulkeKodu
     var dynamicIpString = "http://api.ipapi.com/api/"+ulkeSonKullanici+"?access_key=b8130a15504aba8cee89efafaa11061f"  
         await axios.get(dynamicIpString)
@@ -50,6 +47,21 @@ export default {
         })
         console.log(dynamicIpString)
         console.log(ulkeKodu)
+    */
+
+    var ulkeKodu
+
+    await axios.get("https://ipinfo.io?token=a7fe4b36fcfb01")
+    .then(function(response){
+      console.log(response.data.ip)
+      console.log(response.data.country.trim().toLowerCase())
+      ulkeKodu = response.data.country.trim().toLowerCase() //tr,en,de...
+
+    })
+    .catch(function(error){
+      console.log("->ipinfo.io axios get hatasi->",error)
+    })
+   
 
       //header değerleri -> api-key
       var optionAxios = {
@@ -60,14 +72,13 @@ export default {
       }
       //apitag'i; &tag= ( "->bu kısım değiştikçe içerik değişiyor<-" )
       var apiTag= window.location.pathname.split("/")[1] //pathname ile gelen url fazladan "/" içeriyor split ile 2. dizi elemanını aldık [0]->"/" [1]->"economy"
-      ulkeKodu = "tr"; // silinecekkısım
       this.news = await axios.get('https://api.collectapi.com/news/getNews?country='+ulkeKodu+'&tag='+ apiTag,optionAxios)
       .then( function(response)  { // !!! lambda fonksiyonu olduğunda çalışmadı !!! XXX "function" -> ""=>"" XXX
       //console.log(response.data.result[0].name);
       //console.log(response.data.result[0].description);
       //console.log(response.data.result[0].date);
       
-      return response.data.result // this.news içine değeri bastık üst 3 satır ->"console.log()'lardaki desen devam ediyor.
+      return response.data.result // news içine değeri bastık üst 3 satır ->"console.log()'lardaki desen devam ediyor.
     
        })
        .catch( function(error) {
