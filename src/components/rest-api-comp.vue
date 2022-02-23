@@ -67,7 +67,7 @@ export default {
       var optionAxios = {
           headers: {
             "content-type":"application/json",
-            "authorization":"apikey 0v7dhJ1WwYlaR90Y6ErZdD:3T14eFz8OdWeS9N2z8SIV9"
+            "authorization":"apikey 3cfjyykYR8wpByj2VAq0zY:7i93qnj1uHIOhdDIbCjfR9"
           }
       }
       //apitag'i; &tag= ( "->bu kısım değiştikçe içerik değişiyor<-" )
